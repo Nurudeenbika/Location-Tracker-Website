@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
+const connectDb = async () => {
+  try {
+    await mongoose.connect("mongodb://0.0.0.0:27017/locationApp");
 
-const connectDb = async (req, res) => {
-    try {
-        await mongoose.connect('mongodb://0.0.0.0:27017/locationApp')
+    console.log("Connected to the database");
+  } catch (error) {
+    console.error("Error connecting to the database:", error.message);
+    // Throw error to let the caller handle it appropriately
+    throw error;
+  }
+};
 
-        console.log('connected to database');
-    } catch (error) {
-
-        return res.status(500).json({message: error.message});
-    }
-}
-
-module.exports = connectDb
+module.exports = connectDb;
