@@ -1,0 +1,7 @@
+.app {
+  /* padding: 1rem 3rem; */
+  /* width: min(2500px, 100vw); */
+  /* overflow: hidden; */
+  max-width: 100vw;
+  overflow: hidden;
+}

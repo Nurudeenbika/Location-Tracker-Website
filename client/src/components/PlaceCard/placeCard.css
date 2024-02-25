@@ -1,0 +1,20 @@
+.place-card {
+  cursor: pointer;
+}
+
+.place-card-lower {
+  display: flex;
+  flex-direction: column;
+}
+
+.place-card-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.place-card-title,
+.place-card-rating {
+  color: var(--highlight-color);
+  font-weight: 400;
+  font-size: 0.80rem;
+}

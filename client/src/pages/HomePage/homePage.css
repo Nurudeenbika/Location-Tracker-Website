@@ -1,0 +1,125 @@
+.homepage {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+
+  /* width: min(1200px, 100%); */
+  justify-content: center;
+}
+
+.homepage-upper {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-image: url("/assets/background-image.jpg");
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-title {
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5); /* Subtle white text shadow */
+  text-align: center;
+}
+
+.homepage-text {
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hompage-input-container {
+  margin-top: 2rem;
+
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.hompage-input-container input {
+  outline: none;
+  border: none;
+}
+.hompage-input-container input::placeholder {
+  color: var(--tertiary-color);
+}
+.hompage-input-container input:focus {
+  outline: none;
+  border: none;
+}
+
+.homepage-button {
+  background-color: var(--tertiary-color);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 100%;
+  padding: 0 1rem;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.semi-button {
+  height: 3rem;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  display: none;
+}
+
+.homepage-lower {
+  margin-top: 2rem;
+}
+
+.homepage-lower-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  display: block;
+}
+
+.place-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 580px) {
+  .homepage-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  .homepage-button {
+    display: none;
+  }
+  .semi-button {
+    display: block;
+  }
+}

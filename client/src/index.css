@@ -4,25 +4,28 @@
   --secondary-color: #0d171c;
   --accent-color: #f7fafc;
   --highlight-color: #4f7d96;
+  --tertiary-color: #1a9ce5;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--text-color);
 }
 
-.row {
+button {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
   display: flex;
-  flex-direction: row;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-.centerize {
   align-items: center;
   justify-content: center;
 }
