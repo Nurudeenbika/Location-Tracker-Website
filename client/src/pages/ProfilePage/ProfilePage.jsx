@@ -67,6 +67,33 @@ const ProfilePage = () => {
                   <span className="hover-visited-on">25th February 2024</span>
                 </div>
               </div>
+              <div className="profile-visited-places-container">
+                <img src="/assets/visited-place.png" alt="Image" />
+
+                <div className="visited-image-absolute">
+                  <span className="hover-name">KFC, Albequerqy</span>
+                  <span className="hover-location">Arkansas, USA</span>
+                  <span className="hover-visited-on">25th February 2024</span>
+                </div>
+              </div>
+              <div className="profile-visited-places-container">
+                <img src="/assets/visited-place.png" alt="Image" />
+
+                <div className="visited-image-absolute">
+                  <span className="hover-name">KFC, Albequerqy</span>
+                  <span className="hover-location">Arkansas, USA</span>
+                  <span className="hover-visited-on">25th February 2024</span>
+                </div>
+              </div>
+              <div className="profile-visited-places-container">
+                <img src="/assets/visited-place.png" alt="Image" />
+
+                <div className="visited-image-absolute">
+                  <span className="hover-name">KFC, Albequerqy</span>
+                  <span className="hover-location">Arkansas, USA</span>
+                  <span className="hover-visited-on">25th February 2024</span>
+                </div>
+              </div>
             </div>
           </div>
           <div className="profile-bottom">
@@ -77,6 +104,28 @@ const ProfilePage = () => {
 
             {noOfSavedPlaces > 0 ? (
               <div className="profile-saved-place-images-container">
+                <div className="profile-visited-places-container">
+                  <img src="/assets/saved-place.png" alt="Image" />
+
+                  <div className="visited-image-absolute">
+                    <span className="hover-saved-name">KFC, Albequerqy</span>
+                    <span className="hover-saved-location">Arkansas, USA</span>
+                    <span className="hover-saved-visited-on">
+                      25th February 2024
+                    </span>
+                  </div>
+                </div>
+                <div className="profile-visited-places-container">
+                  <img src="/assets/saved-place.png" alt="Image" />
+
+                  <div className="visited-image-absolute">
+                    <span className="hover-saved-name">KFC, Albequerqy</span>
+                    <span className="hover-saved-location">Arkansas, USA</span>
+                    <span className="hover-saved-visited-on">
+                      25th February 2024
+                    </span>
+                  </div>
+                </div>
                 <div className="profile-visited-places-container">
                   <img src="/assets/saved-place.png" alt="Image" />
 

@@ -11,9 +11,9 @@ const Header = () => {
         <span className="header-title">Places</span>
 
         <ul className="header-links">
-          <li>Places</li>
+          <li>Explore</li>
           <li>Feed</li>
-          <li>Search</li>
+          <li>Following</li>
         </ul>
       </div>
       <div className="header-right">

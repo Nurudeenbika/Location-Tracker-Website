@@ -101,6 +101,7 @@
   position: relative;
 
   cursor: pointer;
+  border-radius: 15px;
 
   transition: all 0.2s ease-in-out;
 }
@@ -129,6 +130,8 @@
 }
 .profile-visited-places-container:hover::after {
   content: "";
+  border-radius: 15px;
+
   position: absolute;
   top: 0;
   left: 0;
