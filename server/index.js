@@ -12,8 +12,12 @@ connectDb();
 
 app.use("api/v1/user", userRouter);
 app.get("/", (req, res) => {
-  res.send("home page");
+  res.send('<a href="/auth/google">Authenticate with Google</a>');
 });
+
+app.get('/protected', (req, res) => {
+  res.send('Hello!')
+})
 
 app.listen(port, () => {
   console.log(`app listening on http://localhost:${port}`);
