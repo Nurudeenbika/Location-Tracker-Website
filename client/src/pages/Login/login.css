@@ -1,0 +1,142 @@
+.header-and-login-page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100vw;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("/assets/background2.jpg");
+  background-position: center;
+
+  background-size: cover;
+
+  padding: 2rem;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-page {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  width: min(500px, 95%);
+
+  gap: 1rem;
+}
+
+.login-title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.login-label-and-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-label-and-input label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.login-label-and-input input {
+  height: 2.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 0.85rem;
+
+  padding: 0.3rem 1rem;
+}
+
+.login-checkbox-and-text {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.login-checkbox-and-text label {
+  font-size: 0.85rem;
+}
+
+.login-checkbox-and-text span {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.login-forgot-password {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: white;
+}
+
+.login-button {
+  margin-top: 0.2rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: var(--highlight-color);
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.login-signup-text,
+.terms-and-conditions-text {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.login-signup-text span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+    padding: 3rem 1rem;
+  }
+
+  .login-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}

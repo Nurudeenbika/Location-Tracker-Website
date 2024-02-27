@@ -75,8 +75,12 @@ const PlacePage = () => {
                 </div>
               </div>
             </div>
-            <div className="page-bottom-middle"></div>
-            <div className="page-bottom-bottom"></div>
+
+            <div className="page-bottom-bottom">
+              <img src="/assets/map.png" alt="Map" />
+
+              <button className="map-button">Diretions</button>
+            </div>
           </div>
         </div>
       </div>
