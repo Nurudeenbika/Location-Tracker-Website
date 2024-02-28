@@ -78,6 +78,11 @@
   justify-content: center;
 
   border-radius: 5px;
+  background-color: var(--accent-color);
+  transition: all 0.1s ease-in-out;
+}
+.header-tags li:hover {
+  scale: 1.05;
   background-color: var(--primary-color);
 }
 
@@ -85,6 +90,39 @@
   cursor: pointer;
 }
 .header-tags li {
+  text-decoration: none;
+}
+
+.header-links > * {
+  text-decoration: none;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.header-buttons button {
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  border-radius: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.header-login {
+  background-color: var(--tertiary-color);
+  color: white;
+  transition: 0.2s ease-in-out all;
+}
+
+.header-login:hover {
+  background-color: var(--highlight-color);
+}
+
+.header-signup:hover {
+  background-color: var(--accent-color);
 }
 
 @media screen and (max-width: 950px) {
@@ -97,14 +135,26 @@
   .header-input-container {
     display: none;
   }
+
+  .header-tag-bookmark,
+  .header-tag-search {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header {
+    padding: 1rem;
+  }
+  .header-right {
+    gap: 0.3rem;
+  }
+  .header-login {
+    display: none;
+  }
 }
 @media screen and (max-width: 480px) {
   .header-tags {
     gap: 0.5rem;
-  }
-
-  .header-right {
-    gap: 1rem;
   }
   .header {
     padding: 0.5rem 1rem;

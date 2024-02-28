@@ -1,9 +1,11 @@
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
   const [isSearchBarOut, setIsSearchBarOut] = useState(false);
   const inputRef = useRef(null);
+  const isLoggedIn = false;
 
   const handleSearchClick = () => {
     setIsSearchBarOut(!isSearchBarOut);
@@ -26,9 +28,15 @@ const Header = () => {
         <span className="header-title">Places</span>
 
         <ul className="header-links">
-          <li>Explore</li>
-          <li>Feed</li>
-          <li>Following</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="feed">
+            <li>Feed</li>
+          </Link>
+          <Link to="following">
+            <li>Following</li>
+          </Link>
         </ul>
       </div>
       <div className="header-right">
@@ -49,22 +57,33 @@ const Header = () => {
         <div className="header-tags">
           <ul>
             {!isSearchBarOut && (
-              <li onClick={handleSearchClick}>
+              <li onClick={handleSearchClick} className="header-tag-search">
                 <img src="/assets/search-icon.png" alt="Search" />
               </li>
             )}
-            <li>
+            <li className="header-tag-bookmark">
               <img src="/assets/bookmark-icon.svg" alt="Bookmark" />
             </li>
-            <li>
+            <li className="header-tag">
               <img src="/assets/notif-icon.png" alt="Notification" />
             </li>
           </ul>
         </div>
 
-        <div className="avatar-container">
-          <img src="/assets/avatar-img.png" alt="Avatar" />
-        </div>
+        {isLoggedIn ? (
+          <div className="avatar-container">
+            <img src="/assets/avatar-img.png" alt="Avatar" />
+          </div>
+        ) : (
+          <div className="header-buttons">
+            <Link to="/login">
+              <button className="header-login">Login</button>
+            </Link>
+            <Link to="/signup">
+              <button className="header-signup">Get started</button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
