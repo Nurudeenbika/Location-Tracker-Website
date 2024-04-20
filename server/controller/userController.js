@@ -5,13 +5,17 @@ const saltRounds = 10
 
 const UserSignup = async (req,res)=>{
    try {
-    const {userName, password, email, phone, address, city, state, zip} = req.body;
+    const { email, password,confirmPassword} = req.body;
 
     const existingUser = await User.findOne({email: email});
 
     if(existingUser){
         return res.status(400).json({message: 'User already exists'})
     };
+
+    if (password !== confirmPassword) {
+        return res.status(400).send('Passwords do not match');
+    }
 
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
@@ -21,14 +25,10 @@ const UserSignup = async (req,res)=>{
     console.log(req.body);
 
     const newUser = new User({
-        userName: userName,
-        password: hashedPassword,
+        
         email: email,
-        phone: phone,
-        address: address,
-        city: city,
-        state: state,
-        zip: zip
+        password: hashedPassword,
+        confirmPassword: hashedPassword
     });
 
      await newUser.save()
@@ -60,7 +60,24 @@ if (!isMatch) {
     return res.status(404).json({message: 'Invalid password'})
 };
 
-    return res.status(200).json({message:'userlogged in successfully'});
+   const expirationTime = process.env.expires_In;
+      const payload = {
+        userId: user._id,
+      };
+      
+      const token = jwt.sign(
+        payload,
+        process.env.JWT_SECRET,
+        { expiresIn: expirationTime }
+        );
+        // console.log(token)
+        
+      const dataInfo = {
+        status: "success",
+        message: "Admin Logged in successful",
+        access_token: token,
+      };
+      return res.status(200).json(dataInfo);
 
    } catch (error) {
     console.log(error);
